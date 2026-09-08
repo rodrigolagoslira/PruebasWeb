@@ -2,6 +2,19 @@
 
 Este archivo contiene las instrucciones y principios que Claude debe seguir al inicio de cada proyecto de desarrollo.
 
+---
+
+## Preferencias del Usuario (rlagos@scraices.cl)
+
+### Directorio de salida de documentos generados
+Todo archivo Excel, PDF o documento generado debe guardarse en:
+```
+C:\Users\rodri\OneDrive\Documentos Claude Code
+```
+En sesiones remotas (donde esa ruta no existe), usar `output/` local como fallback y avisar al usuario que el archivo quedó en el servidor remoto.
+
+---
+
 ## Principios de Desarrollo
 
 ### 1. Arquitectura y Diseño

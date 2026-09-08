@@ -32,8 +32,14 @@ KEYWORDS = [
 
 IVA = 0.19
 
-OUTPUT_FILE = os.path.join(os.path.dirname(__file__), '..', 'output',
-                           f'Pension_Alojamiento_Alimentacion_{datetime.now():%Y%m%d_%H%M}.xlsx')
+# Directorio de salida: OneDrive local (Windows) o carpeta output/ del proyecto (Linux/remoto)
+_WINDOWS_OUTPUT_DIR = r'C:\Users\rodri\OneDrive\Documentos Claude Code'
+_FALLBACK_OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'output')
+
+_OUTPUT_DIR = _WINDOWS_OUTPUT_DIR if os.path.isdir(_WINDOWS_OUTPUT_DIR) else _FALLBACK_OUTPUT_DIR
+os.makedirs(_OUTPUT_DIR, exist_ok=True)
+
+OUTPUT_FILE = os.path.join(_OUTPUT_DIR, f'Pension_Alojamiento_Alimentacion_{datetime.now():%Y%m%d_%H%M}.xlsx')
 
 # ─── Helpers ─────────────────────────────────────────────────────────────────
 
