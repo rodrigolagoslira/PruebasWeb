@@ -74,14 +74,14 @@ PROYECTOS = {
 # Nombre de la hoja Gantt principal por proyecto (donde está la fila "Programa")
 GANTT_HOJAS = {
     "P31":  "Programa de obra",
-    "P38":  "% Avance",
+    "P38":  "Programa de obra",
     "P126": "Programa de obra",
     "P39":  "Programa de obra",
     "P127": "Programa de obra",
     "P12":  "Programa de obra",
     "P14":  "Programa de obra",
     "P116": "Programa de obra",
-    "P119": "Ñuke Mapu",
+    "P119": "Programa de obra",
     "P131": "Programa de obra",
     "P28":  "Programa de obra",
 }
