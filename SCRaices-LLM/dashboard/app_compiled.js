@@ -16,7 +16,7 @@ const ETAPAS_CONFIG_FULL={"_comentario":"Configuración de tiempos para etapas d
 // congelando el snapshot.
 // IMPORTANTE: cualquier deployment nuevo DEBE publicarse como "Cualquier
 // persona", no "Cualquier usuario".
-const APPS_SCRIPT_URL="https://script.google.com/macros/s/AKfycbxcJowX3a3XBmSNiKOCesj1jRkQWS1VIsMbvdt-x7ckK8ZXMauI6gRgCGsoT77xYxpP/exec";const LIVE_FETCH_ENABLED=true;const TABLES_TO_FETCH="Proyectos,Beneficiario,Despacho,soldepacho,Ejecucion,Solpago,Maestros,Tabla_pago,Tipologias,controlBGB,controlEEPP,Seguimiento";// Snapshot crudo pre-generado cada 15 min por el workflow data_snapshot.yml.
+const APPS_SCRIPT_URL="https://script.google.com/macros/s/AKfycbxWg0PS8Z7DQrc6ucynsP_IoHgkdSZ3EAEjW6d_LzBxhbh7fTFXxLmWG1pKa5kZr1HK/exec";const LIVE_FETCH_ENABLED=true;const TABLES_TO_FETCH="Proyectos,Beneficiario,Despacho,soldepacho,Ejecucion,Solpago,Maestros,Tabla_pago,Tipologias,controlBGB,controlEEPP,Seguimiento";// Snapshot crudo pre-generado cada 15 min por el workflow data_snapshot.yml.
 // Se sirve desde el CDN de GitHub (rama dedicada data-snapshot) para el
 // primer pintado instantaneo en cualquier dispositivo, antes del fetch en vivo.
 const SNAPSHOT_URL="https://raw.githubusercontent.com/PitufosTEch/PruebasWeb/data-snapshot/data_snapshot.json";// Mapeo columna real → short code + peso (28 partidas vivienda)
