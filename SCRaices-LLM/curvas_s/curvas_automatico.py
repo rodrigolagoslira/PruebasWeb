@@ -469,7 +469,7 @@ def s_curve_real(t_days, pct_real, t_control):
     if t_control <= 0 or pct_real == 0:
         return 0.0
     t_norm = t_days / t_control
-    k = 5.0
+    k = 8.0
     val      = expit(k * (t_norm - 0.5))
     val_max  = expit(k * 0.5)
     val_min  = expit(k * (-0.5))
