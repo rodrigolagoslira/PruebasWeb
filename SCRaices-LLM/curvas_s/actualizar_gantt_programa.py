@@ -92,11 +92,11 @@ def get_credentials():
 
 def _parse_fecha(s):
     """
-    Parsea una fecha en formato DD/MM/YYYY o MM/DD/YYYY.
+    Parsea una fecha en formato DD/MM/YYYY, MM/DD/YYYY, DD-MM-YYYY, MM-DD-YYYY o YYYY-MM-DD.
     Retorna datetime o None.
     """
     s = str(s).strip()
-    for fmt in ("%d/%m/%Y", "%m/%d/%Y", "%Y-%m-%d"):
+    for fmt in ("%d/%m/%Y", "%m/%d/%Y", "%d-%m-%Y", "%m-%d-%Y", "%Y-%m-%d"):
         try:
             return datetime.strptime(s, fmt)
         except ValueError:
@@ -110,7 +110,7 @@ def _resolver_fechas(s1, s2, dias_val):
     que sea consistente con dias_val (TERMINO - INICIO ≈ dias_val).
     Retorna (inicio, termino, dias) o (None, None, None).
     """
-    formatos = ["%d/%m/%Y", "%m/%d/%Y"]
+    formatos = ["%d/%m/%Y", "%m/%d/%Y", "%d-%m-%Y", "%m-%d-%Y"]
     try:
         dias_val = int(float(str(dias_val)))
     except (ValueError, TypeError):
