@@ -4921,7 +4921,7 @@ const EstadoGeneralTab = ({ viviendas, observaciones, grupos, resumenComentarios
             ? curvasConf.map(c => `
                 <div style="border:1px solid #e2e8f0;border-radius:8px;overflow:hidden;break-inside:avoid;">
                   <div style="background:#f8fafc;padding:6px 12px;font-size:11px;font-weight:600;color:#475569;border-bottom:1px solid #e2e8f0;">${escapeHtmlBasic(c.label)}</div>
-                  <img src="https://drive.google.com/thumbnail?id=${c.id}&sz=w800&t=${Math.floor(Date.now()/86400000)}" style="width:100%;display:block;" alt="${escapeHtmlBasic(c.label)}" loading="lazy"/>
+                  <img src="https://lh3.googleusercontent.com/d/${c.id}=w800" style="width:100%;display:block;" alt="${escapeHtmlBasic(c.label)}" loading="lazy"/>
                 </div>`).join('')
             : `<div style="grid-column:1/-1;color:#94a3b8;font-size:12px;padding:20px;text-align:center;border:1px dashed #e2e8f0;border-radius:8px;">Las curvas S se actualizan automáticamente cada lunes 08:00.<br>Verifica que el proyecto tenga curvas S configuradas.</div>`;
 
@@ -5372,7 +5372,7 @@ h3.sh::after{content:'';flex:1;height:1px;background:#e2e8f0;}
         // ── CURVAS S ──────────────────────────────────────────────────────────────────────────
         let sCurv = `<div class="blk"><div class="cg">`;
         if (curvasFiltro.length > 0) {
-            curvasFiltro.forEach(c => { sCurv += `<div class="cc"><div class="ch">${esc(c.label)}</div><img src="https://drive.google.com/thumbnail?id=${c.id}&sz=w800&t=${Math.floor(Date.now()/86400000)}" style="width:100%;display:block;" alt="${esc(c.label)}" loading="lazy"/></div>`; });
+            curvasFiltro.forEach(c => { sCurv += `<div class="cc"><div class="ch">${esc(c.label)}</div><img src="https://lh3.googleusercontent.com/d/${c.id}=w800" style="width:100%;display:block;" alt="${esc(c.label)}" loading="lazy"/></div>`; });
         } else {
             sCurv += `<div style="color:#94a3b8;font-size:13px;padding:32px;text-align:center;grid-column:1/-1;">Sin curvas S configuradas para este proyecto.</div>`;
         }
@@ -5685,7 +5685,7 @@ h3.sh::after{content:'';flex:1;height:1px;background:#e2e8f0;}
         let sCurv='';
         proyData.forEach((d,pi)=>{
             sCurv+=`<div class="obra-block blk" data-obra="${pi}" style="border-left:4px solid #0f172a;">${prjHdr(d.nombre)}`;
-            if(d.curvas.length>0){sCurv+=`<div class="cg">`;d.curvas.forEach(c=>{sCurv+=`<div class="cc"><div class="ch">${esc(c.label)}</div><img src="https://drive.google.com/thumbnail?id=${c.id}&sz=w800&t=${Math.floor(Date.now()/86400000)}" style="width:100%;display:block;" alt="${esc(c.label)}" loading="lazy"/></div>`;});sCurv+=`</div>`;}
+            if(d.curvas.length>0){sCurv+=`<div class="cg">`;d.curvas.forEach(c=>{sCurv+=`<div class="cc"><div class="ch">${esc(c.label)}</div><img src="https://lh3.googleusercontent.com/d/${c.id}=w800" style="width:100%;display:block;" alt="${esc(c.label)}" loading="lazy"/></div>`;});sCurv+=`</div>`;}
             else sCurv+=`<div style="color:#94a3b8;font-size:13px;padding:16px;text-align:center;">Sin curvas S configuradas.</div>`;
             sCurv+=`</div>`;
         });
@@ -6183,7 +6183,7 @@ ${_buildPersonalBanda(personalObraRaw[obra.ID_proy] || {})}
                 curvas.forEach(c => {
                     const cap = getCapataz(obra.ID_proy, c.label);
                     const capHtml = cap ? `<div style="font-size:10px;color:#64748b;margin-top:2px;">👷 ${cap}</div>` : '';
-                    h += `<div class="curva-card"><div class="curva-header">${c.label}${capHtml}</div><img src="https://drive.google.com/thumbnail?id=${c.id}&sz=w800&t=${Math.floor(Date.now()/86400000)}" style="width:100%;display:block;" alt="${c.label}" loading="lazy"/></div>`;
+                    h += `<div class="curva-card"><div class="curva-header">${c.label}${capHtml}</div><img src="https://lh3.googleusercontent.com/d/${c.id}=w800" style="width:100%;display:block;" alt="${c.label}" loading="lazy"/></div>`;
                 });
                 h += `</div>`;
             } else if (tab === 'viviendas') {
@@ -6721,7 +6721,7 @@ ${_buildPersonalBanda(personalObraRaw[obra.ID_proy] || {})}
                 curvas.forEach(c => {
                     const cap = getCapataz(obra.ID_proy, c.label);
                     const capHtml = cap ? `<div style="font-size:10px;color:#64748b;margin-top:2px;">👷 ${cap}</div>` : '';
-                    h += `<div class="curva-card"><div class="curva-header">${c.label}${capHtml}</div><img src="https://drive.google.com/thumbnail?id=${c.id}&sz=w800&t=${Math.floor(Date.now()/86400000)}" style="width:100%;display:block;" alt="${c.label}" loading="lazy"/></div>`;
+                    h += `<div class="curva-card"><div class="curva-header">${c.label}${capHtml}</div><img src="https://lh3.googleusercontent.com/d/${c.id}=w800" style="width:100%;display:block;" alt="${c.label}" loading="lazy"/></div>`;
                 });
                 h += `</div>`;
             } else if (tab === 'ritmos') {
@@ -7421,7 +7421,7 @@ ${_buildPersonalBanda(personalObraRaw[obra.ID_proy] || {})}
                 curvas.forEach(c => {
                     const cap = getCapataz(obra.ID_proy, c.label);
                     const capHtml = cap ? `<div style="font-size:10px;color:#64748b;margin-top:2px;">👷 ${cap}</div>` : '';
-                    h += `<div class="curva-card"><div class="curva-header">${c.label}${capHtml}</div><img src="https://drive.google.com/thumbnail?id=${c.id}&sz=w800&t=${Math.floor(Date.now()/86400000)}" style="width:100%;display:block;" alt="${c.label}" loading="lazy"/></div>`;
+                    h += `<div class="curva-card"><div class="curva-header">${c.label}${capHtml}</div><img src="https://lh3.googleusercontent.com/d/${c.id}=w800" style="width:100%;display:block;" alt="${c.label}" loading="lazy"/></div>`;
                 });
                 h += `</div>`;
             } else if (tab === 'comentarios') {
@@ -9035,7 +9035,7 @@ ${viewerCss}</style>
                             <div key={c.id} className="border border-gray-100 rounded-lg overflow-hidden">
                                 <div className="bg-gray-50 px-3 py-1.5 text-[11px] font-semibold text-gray-600 border-b border-gray-100">{c.label}</div>
                                 <img
-                                    src={`https://drive.google.com/thumbnail?id=${c.id}&sz=w800&t=${Math.floor(Date.now()/86400000)}`}
+                                    src={`https://lh3.googleusercontent.com/d/${c.id}=w800`}
                                     alt={c.label}
                                     className="w-full block"
                                     loading="lazy"
